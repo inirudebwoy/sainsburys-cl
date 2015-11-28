@@ -1,0 +1,7 @@
+-requirements.txt
+-e .
+
+tox>2.0
+pytest
+coverage
+pytest-cov
