@@ -31,5 +31,8 @@ def find_title(html):
 
 
 def all_links(parsed_html):
-    for p in parsed_html.select('div.productInfo a'):
-        yield p.get('href')
+    try:
+        for p in parsed_html.select('div.productInfo a'):
+            yield p.get('href')
+    except AttributeError:
+        raise StopIteration

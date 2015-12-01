@@ -28,6 +28,9 @@ def get_html(url):
 
 def product_details(product):
     html, size = get_html(product)
+    if not html:
+        return {}
+
     return {'title': find_title(html),
             'size': size,
             'unit_price': find_price(html),
