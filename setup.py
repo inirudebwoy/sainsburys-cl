@@ -1,9 +1,5 @@
-from os.path import join, dirname
 from setuptools import setup
 
-
-def read(fname):
-    return open(join(dirname(__file__), fname)).read()
 
 setup(
     name='sainsburys-cl',
@@ -16,7 +12,9 @@ setup(
     include_package_data=True,
     packages=['sainsburys-cl'],
     url='https://github.com/inirudebwoy/sainsburys-cl',
-    install_requires=read("requirements.txt"),
+    install_requires=['beautifulsoup4>=4.4.1',
+                      'requests>=2.7.0',
+                      'click>=6.2'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
