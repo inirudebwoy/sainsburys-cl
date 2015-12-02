@@ -32,7 +32,10 @@ def _find_item(html, selector):
     :rtype: str
 
     """
-    return html.select_one(selector).get_text()
+    try:
+        return html.select_one(selector).get_text()
+    except AttributeError:
+        return ''
 
 
 def find_price(html):
