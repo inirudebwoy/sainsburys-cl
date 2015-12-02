@@ -1,10 +1,9 @@
 from setuptools import setup
 
-
 setup(
     name='sainsburys_cl',
     version='0.0.1',
-    description=('Command line script that returns TODO'),
+    description=('Command line script for parsing products page'),
     long_description=open('README.md').read(),
     license='GPLv2',
     author='Michal Klich',
@@ -15,7 +14,7 @@ setup(
     install_requires=['beautifulsoup4>=4.4.1',
                       'requests>=2.7.0',
                       'click>=6.2'],
-    entry_points={'console_scripts': ['scl = sainsburys_cl.main:grabber']},
+    entry_points={'console_scripts': ['scl = sainsburys_cl.main:scl']},
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
