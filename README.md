@@ -34,3 +34,11 @@ Usage: scl [OPTIONS] URL
 Options:
   --help  Show this message and exit.
 ```
+
+
+Running unit tests
+==================
+
+```bash
+$ tox
+```
